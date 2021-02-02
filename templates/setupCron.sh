@@ -18,8 +18,8 @@ export NPM_COMMAND=$NPM_COMMAND
 echo "npm $NPM_COMMAND"
 
 
-env                                           >> /tmp/.env
-cat /tmp/.env                                 >> /etc/cron.d/my-cron-job
+env                                           > /tmp/.env
+cat /tmp/.env                                 > /etc/cron.d/my-cron-job
 echo -n "$TASK_SCHEDULE" | cat - /tmp/crontab >> /etc/cron.d/my-cron-job
 
 
